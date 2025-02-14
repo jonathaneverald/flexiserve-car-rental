@@ -1,10 +1,16 @@
 import React from "react";
-import ExploreCarCards from "../components/CarCards";
+import ExploreCarCards from "../components/ExploreCarCards";
+import { useNavigate } from "react-router-dom";
 
 const Home: React.FC = () => {
+    const navigate = useNavigate();
+
+    const handleButtonClick = () => {
+        navigate("/cars");
+        window.scrollTo(0, 0);
+    };
     return (
         <>
-            {/* Section 1 */}
             {/* Section 1 */}
             <section className="flex flex-col gap-10 text-blue-400">
                 {/* Hero Image */}
@@ -52,7 +58,10 @@ const Home: React.FC = () => {
                 </div>
                 <div className="text-center px-4 sm:px-6 py-3 w-full max-w-md mx-auto">
                     <p className="text-xl sm:text-2xl mb-2">Starting at just $200/week!</p>
-                    <button className="text-base sm:text-lg font-bold text-white bg-blue-400 rounded-lg px-6 py-2 mt-4 hover:bg-blue-500 transition-colors duration-300 cursor-pointer w-auto mx-auto block">
+                    <button
+                        onClick={handleButtonClick}
+                        className="text-base sm:text-lg font-bold text-white bg-blue-400 rounded-lg px-6 py-2 mt-4 hover:bg-blue-500 transition-colors duration-300 cursor-pointer w-auto mx-auto block"
+                    >
                         Explore Cars
                     </button>
                 </div>
@@ -107,7 +116,10 @@ const Home: React.FC = () => {
                     </div>
                 </div>
 
-                <button className="text-base sm:text-lg font-bold text-white bg-blue-400 rounded-lg px-6 py-2 mt-4 mb-4 hover:bg-blue-500 transition-colors duration-300 cursor-pointer w-auto mx-auto block">
+                <button
+                    onClick={handleButtonClick}
+                    className="text-base sm:text-lg font-bold text-white bg-blue-400 rounded-lg px-6 py-2 mt-4 mb-4 hover:bg-blue-500 transition-colors duration-300 cursor-pointer w-auto mx-auto block"
+                >
                     Get Started Now
                 </button>
             </section>

@@ -1,31 +1,74 @@
-const ExploreCarCards = () => {
-    const carTypes = [
-        { title: "SUV", image: "https://i.ibb.co.com/7J6VtGz5/suv-car.jpg" },
-        { title: "Sedans", image: "https://i.ibb.co.com/vvJG7cGg/sedan-car.jpg" },
-        { title: "Convertible", image: "https://i.ibb.co.com/Q4SkVSx/convertible-car.jpg" },
-        { title: "Hatchback", image: "https://i.ibb.co.com/9mBpKfDF/hatchback-car.jpg" },
-    ];
+// Define car data type
+export interface Car {
+    id: number;
+    name: string;
+    image: string;
+    seats: number;
+    luggage: string;
+    idealFor: string;
+    perfectFor: string;
+    transmission: string;
+    price: number;
+    type: string;
+}
+
+const CarCard: React.FC<{ car: Car }> = ({ car }) => {
+    // const router = useRouter();
+
+    const handleBookNow = () => {
+        // Prepare the message with car details
+        const message = `Hello, I'm interested in renting the ${car.name} (${car.type}) for $${car.price}/day`;
+
+        // Create the WhatsApp URL with phone number and pre-filled message
+        const whatsappUrl = `https://wa.me/61431244819?text=${encodeURIComponent(message)}`;
+
+        // Open WhatsApp in a new tab
+        window.open(whatsappUrl, "_blank");
+    };
 
     return (
-        <div className="w-full mt-8 md:mt-12 lg:mt-16 max-w-7xl mx-auto px-4 md:px-6 lg:px-8 mb-8 md:mb-12 lg:mb-16">
-            <h2 className="text-2xl md:text-3xl lg:text-4xl text-blue-400 font-bold mb-6 md:mb-8 lg:mb-10">Explore Our Cars</h2>
+        <div className="bg-white rounded-lg shadow-md overflow-hidden transition-transform duration-300 hover:shadow-lg hover:-translate-y-1">
+            <div className="relative">
+                <img src={car.image} alt={car.name} className="w-full h-48 object-cover" />
+                <div className="absolute top-0 right-0 bg-blue-500 text-white px-3 py-1 m-2 rounded-md">${car.price}/day</div>
+            </div>
 
-            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 md:gap-6">
-                {carTypes.map((car, index) => (
-                    <div key={index} className="bg-white rounded-lg shadow-lg overflow-hidden transform transition-transform hover:scale-105 cursor-pointer">
-                        {/* Image container with no padding */}
-                        <div className="aspect-[4/3] w-full">
-                            <img src={car.image} alt={`${car.title} car`} className="w-full h-full object-cover" />
-                        </div>
-                        {/* Title container */}
-                        <div className="p-4 text-center">
-                            <h3 className="text-blue-400 text-lg md:text-xl font-semibold">{car.title}</h3>
-                        </div>
+            <div className="p-4">
+                <h3 className="text-xl font-bold text-blue-500 mb-3">{car.name}</h3>
+
+                <div className="space-y-2 mb-4">
+                    <div className="flex items-start">
+                        <span className="text-blue-400 font-medium w-28">Seats:</span>
+                        <span className="text-gray-600">{car.seats}</span>
                     </div>
-                ))}
+                    <div className="flex items-start">
+                        <span className="text-blue-400 font-medium w-28">Luggage:</span>
+                        <span className="text-gray-600">{car.luggage}</span>
+                    </div>
+                    <div className="flex items-start">
+                        <span className="text-blue-400 font-medium w-28">Ideal For:</span>
+                        <span className="text-gray-600">{car.idealFor}</span>
+                    </div>
+                    <div className="flex items-start">
+                        <span className="text-blue-400 font-medium w-28">Perfect For:</span>
+                        <span className="text-gray-600">{car.perfectFor}</span>
+                    </div>
+                    <div className="flex items-start">
+                        <span className="text-blue-400 font-medium w-28">Transmission:</span>
+                        <span className="text-gray-600">{car.transmission}</span>
+                    </div>
+                    <div className="flex items-start">
+                        <span className="text-blue-400 font-medium w-28">Type:</span>
+                        <span className="text-gray-600">{car.type}</span>
+                    </div>
+                </div>
+
+                <button onClick={handleBookNow} className="w-full bg-blue-500 hover:bg-blue-600 text-white font-medium py-2 rounded-md transition duration-300 cursor-pointer">
+                    Book Now
+                </button>
             </div>
         </div>
     );
 };
 
-export default ExploreCarCards;
+export default CarCard;

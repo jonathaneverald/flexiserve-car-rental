@@ -24,17 +24,14 @@ const Header: React.FC = () => {
                 </button>
                 <div className="hidden md:block">
                     <div className="flex gap-8 font-bold text-blue-400">
+                        <a href="/" className=" hover:text-blue-800">
+                            Home
+                        </a>
                         <a href="/about" className=" hover:text-blue-800">
                             About
                         </a>
-                        <a href="/guide" className=" hover:text-blue-800">
-                            Guide
-                        </a>
                         <a href="/cars" className=" hover:text-blue-800">
                             Cars
-                        </a>
-                        <a href="/contact" className=" hover:text-blue-800">
-                            Contact
                         </a>
                     </div>
                 </div>
@@ -42,17 +39,14 @@ const Header: React.FC = () => {
             {isMenuOpen && (
                 <div className="menu md:hidden p-4">
                     <div className="flex flex-col gap-5 font-bold text-center text-blue-400">
+                        <a href="/" className=" hover:text-blue-800">
+                            Home
+                        </a>
                         <a href="/about" className=" hover:text-blue-800">
                             About
                         </a>
-                        <a href="/guide" className="hover:text-blue-800">
-                            Guide
-                        </a>
                         <a href="/cars" className="hover:text-blue-800">
                             Cars
-                        </a>
-                        <a href="/contact" className="hover:text-blue-800">
-                            Contact
                         </a>
                     </div>
                 </div>
