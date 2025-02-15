@@ -7,7 +7,10 @@ const Home: React.FC = () => {
 
     const handleButtonClick = () => {
         navigate("/cars");
-        window.scrollTo(0, 0);
+        window.scrollTo({
+            top: 0,
+            behavior: "smooth",
+        });
     };
     return (
         <>
@@ -90,12 +93,13 @@ const Home: React.FC = () => {
                             <p className="text-base md:text-lg leading-relaxed max-w-[500px] mx-auto md:mx-0">Explore our wide range of vehicles and select the one that best fits your needs.</p>
                         </div>
                     </div>
-                    {/* Step 2*/}
+                    {/* Step 2 - Modified for mobile-first image */}
                     <div className="flex flex-col md:flex-row md:items-center gap-6 md:gap-8">
+                        {/* Image moved before text for mobile, but will be ordered correctly on md breakpoint */}
                         <img
                             src="/src/assets/undraw_confirmed_f581.svg"
                             alt="FlexiServe Car Rental"
-                            className="mx-auto max-w-[200px] w-full h-auto object-contain md:max-w-[240px] lg:max-w-[280px] md:mx-0"
+                            className="mx-auto max-w-[200px] w-full h-auto object-contain md:max-w-[240px] lg:max-w-[280px] md:mx-0 md:order-last"
                         />
                         <div className="flex flex-col gap-2 md:gap-3 text-center md:text-center">
                             <h3 className="text-2xl md:text-3xl font-bold">Confirm Your Booking</h3>
@@ -133,57 +137,60 @@ const Home: React.FC = () => {
 
                 {/* Content*/}
                 <div className="flex flex-col gap-30 mt-4">
-                    {/* Step 1*/}
+                    {/* Step 1 - Left aligned */}
                     <div className="flex flex-col md:flex-row md:items-center gap-6 md:gap-8">
-                        <div className="flex flex-col gap-2 md:gap-3 text-center md:text-right">
-                            <h3 className="text-2xl md:text-3xl font-bold">Comprehensive Coverage</h3>
-                            <p className="text-base md:text-lg leading-relaxed max-w-[500px] mx-auto md:mx-0">Enjoy peace of mind with fully comprehensive car insurance included in every rental.</p>
-                        </div>
                         <img
                             src="/src/assets/undraw_security-on_btwg.svg"
                             alt="FlexiServe Car Rental"
-                            className="mx-auto max-w-[140px] w-full h-auto object-contain md:max-w-[180px] lg:max-w-[220px] md:mx-0"
+                            className="mx-auto max-w-[140px] w-full h-auto object-contain md:max-w-[180px] lg:max-w-[220px] md:mx-0 order-first"
                         />
+                        <div className="flex flex-col gap-2 md:gap-3 text-center md:text-left">
+                            <h3 className="text-2xl md:text-3xl font-bold">Comprehensive Coverage</h3>
+                            <p className="text-base md:text-lg leading-relaxed max-w-[500px] mx-auto md:mx-0">Enjoy peace of mind with fully comprehensive car insurance included in every rental.</p>
+                        </div>
                     </div>
-                    {/* Step 2*/}
+
+                    {/* Step 2 - Right aligned */}
                     <div className="flex flex-col md:flex-row md:items-center gap-6 md:gap-8">
+                        <img
+                            src="/src/assets/undraw_car-repair_wski.svg"
+                            alt="FlexiServe Car Rental"
+                            className="mx-auto max-w-[140px] w-full h-auto object-contain md:max-w-[180px] lg:max-w-[220px] md:mx-0 order-first md:order-last"
+                        />
                         <div className="flex flex-col gap-2 md:gap-3 text-center md:text-right">
                             <h3 className="text-2xl md:text-3xl font-bold">Hassle-Free Maintenance</h3>
                             <p className="text-base md:text-lg leading-relaxed max-w-[500px] mx-auto md:mx-0">
                                 No need to worry about upkeep—our rentals come with all maintenance and registration handled for you.
                             </p>
                         </div>
-                        <img
-                            src="/src/assets/undraw_car-repair_wski.svg"
-                            alt="FlexiServe Car Rental"
-                            className="mx-auto max-w-[140px] w-full h-auto object-contain md:max-w-[180px] lg:max-w-[220px] md:mx-0"
-                        />
                     </div>
-                    {/* Step 3*/}
+
+                    {/* Step 3 - Left aligned */}
                     <div className="flex flex-col md:flex-row md:items-center gap-6 md:gap-8">
-                        <div className="flex flex-col gap-2 md:gap-3 text-center md:text-right">
-                            <h3 className="text-2xl md:text-3xl font-bold">Generous Mileage Allowance</h3>
-                            <p className="text-base md:text-lg leading-relaxed max-w-[500px] mx-auto md:mx-0">Drive up to 150km per day with no extra charges, perfect for your daily adventures.</p>
-                        </div>
                         <img
                             src="/src/assets/undraw_travel-mode_ydxo.svg"
                             alt="FlexiServe Car Rental"
-                            className="mx-auto max-w-[140px] w-full h-auto object-contain md:max-w-[180px] lg:max-w-[220px] md:mx-0"
+                            className="mx-auto max-w-[140px] w-full h-auto object-contain md:max-w-[180px] lg:max-w-[220px] md:mx-0 order-first"
                         />
+                        <div className="flex flex-col gap-2 md:gap-3 text-center md:text-left">
+                            <h3 className="text-2xl md:text-3xl font-bold">Generous Mileage Allowance</h3>
+                            <p className="text-base md:text-lg leading-relaxed max-w-[500px] mx-auto md:mx-0">Drive up to 150km per day with no extra charges, perfect for your daily adventures.</p>
+                        </div>
                     </div>
-                    {/* Step 4*/}
+
+                    {/* Step 4 - Right aligned */}
                     <div className="flex flex-col md:flex-row md:items-center gap-6 md:gap-8">
+                        <img
+                            src="/src/assets/undraw_vintage_q09n.svg"
+                            alt="FlexiServe Car Rental"
+                            className="mx-auto max-w-[140px] w-full h-auto object-contain md:max-w-[180px] lg:max-w-[220px] md:mx-0 order-first md:order-last"
+                        />
                         <div className="flex flex-col gap-2 md:gap-3 text-center md:text-right">
                             <h3 className="text-2xl md:text-3xl font-bold">Reliable and Convenient</h3>
                             <p className="text-base md:text-lg leading-relaxed max-w-[500px] mx-auto md:mx-0">
                                 Our cars are always in excellent condition, ready to provide a smooth and enjoyable driving experience.
                             </p>
                         </div>
-                        <img
-                            src="/src/assets/undraw_vintage_q09n.svg"
-                            alt="FlexiServe Car Rental"
-                            className="mx-auto max-w-[140px] w-full h-auto object-contain md:max-w-[180px] lg:max-w-[220px] md:mx-0"
-                        />
                     </div>
                 </div>
                 {/* Add explore cars here */}

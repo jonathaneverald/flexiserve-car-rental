@@ -1,12 +1,28 @@
-import { Link } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 
 const ExploreCarCards = () => {
+    const navigate = useNavigate();
+
     const carTypes = [
-        { title: "SUV", image: "https://i.ibb.co.com/7J6VtGz5/suv-car.jpg" },
-        { title: "Sedan", image: "https://i.ibb.co.com/vvJG7cGg/sedan-car.jpg" },
-        { title: "Convertible", image: "https://i.ibb.co.com/Q4SkVSx/convertible-car.jpg" },
-        { title: "Hatchback", image: "https://i.ibb.co.com/9mBpKfDF/hatchback-car.jpg" },
+        // { title: "SUV", image: "https://i.ibb.co.com/7J6VtGz5/suv-car.jpg" },
+        // { title: "Sedan", image: "https://i.ibb.co.com/vvJG7cGg/sedan-car.jpg" },
+        // { title: "Convertible", image: "https://i.ibb.co.com/Q4SkVSx/convertible-car.jpg" },
+        // { title: "Hatchback", image: "https://i.ibb.co.com/9mBpKfDF/hatchback-car.jpg" },
+        { title: "SUV", image: "https://i.ibb.co.com/67XySQmJ/suv-toyota-kluger.jpg" },
+        { title: "Sedan", image: "https://i.ibb.co.com/Zp2Dcvsn/sedan-holden-caprice.jpg" },
+        { title: "Convertible", image: "https://i.ibb.co.com/35fkcd2y/convertible-holden-cascada.jpg" },
+        { title: "Hatchback", image: "https://i.ibb.co.com/xqzLsdX9/hatchback-holden-cruze.jpg" },
     ];
+
+    const handleCarClick = (carType: string) => {
+        // First navigate to the new URL
+        navigate(`/cars?type=${carType}`);
+        // Then scroll to top
+        window.scrollTo({
+            top: 0,
+            behavior: "smooth",
+        });
+    };
 
     return (
         <div className="w-full mt-8 md:mt-12 lg:mt-16 max-w-7xl mx-auto px-4 md:px-6 lg:px-8 mb-8 md:mb-12 lg:mb-16">
@@ -14,18 +30,18 @@ const ExploreCarCards = () => {
 
             <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 md:gap-6">
                 {carTypes.map((car, index) => (
-                    <Link key={index} to={`/cars?type=${car.title}`} className="no-underline">
-                        <div className="bg-white rounded-lg shadow-lg overflow-hidden transform transition-transform hover:scale-105 cursor-pointer">
-                            {/* Image container with no padding */}
-                            <div className="aspect-[4/3] w-full">
-                                <img src={car.image} alt={`${car.title} car`} className="w-full h-full object-cover" />
-                            </div>
-                            {/* Title container */}
-                            <div className="p-4 text-center">
-                                <h3 className="text-blue-400 text-lg md:text-xl font-semibold">{car.title}</h3>
-                            </div>
+                    <div key={index} onClick={() => handleCarClick(car.title)} className="bg-white rounded-lg shadow-lg overflow-hidden transform transition-transform hover:scale-105 cursor-pointer">
+                        {/* Image container with fixed aspect ratio */}
+                        <div className="relative pt-[55%]">
+                            {" "}
+                            {/* This creates a 5:3 aspect ratio */}
+                            <img src={car.image} alt={`${car.title} car`} className="absolute top-0 left-0 w-full h-full object-cover" />
                         </div>
-                    </Link>
+                        {/* Title container */}
+                        <div className="p-4 text-center">
+                            <h3 className="text-blue-400 text-lg md:text-xl font-semibold">{car.title}</h3>
+                        </div>
+                    </div>
                 ))}
             </div>
         </div>

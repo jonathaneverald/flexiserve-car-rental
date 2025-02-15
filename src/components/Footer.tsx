@@ -16,7 +16,7 @@ const Footer: React.FC = () => {
                         <h3 className="text-xl text-blue-400 font-medium mb-4">Company</h3>
                         <ul className="space-y-2">
                             <li>
-                                <a href="#" className="text-blue-400 hover:underline text-sm">
+                                <a href="/" className="text-blue-400 hover:underline text-sm">
                                     Home
                                 </a>
                             </li>
@@ -26,7 +26,7 @@ const Footer: React.FC = () => {
                                 </a>
                             </li>
                             <li>
-                                <a href="#" className="text-blue-400 hover:underline text-sm">
+                                <a href="cars" className="text-blue-400 hover:underline text-sm">
                                     Cars
                                 </a>
                             </li>

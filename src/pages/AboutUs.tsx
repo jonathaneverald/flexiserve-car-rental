@@ -31,7 +31,7 @@ const About: React.FC = () => {
             {/* Features Timeline */}
             <div className="relative container mx-auto px-4 pb-16">
                 {/* Vertical timeline line */}
-                <div className="absolute left-1/2 top-0 bottom-0 w-1 bg-blue-200 transform -translate-x-1/2 hidden md:block"></div>
+                <div className="absolute left-1/2 top-0 bottom-0 transform -translate-x-1/2 w-1 sm:w-2 md:w-6 lg:w-10  bg-blue-200/50 sm:bg-blue-200/60 md:bg-blue-200/70 lg:bg-blue-200"></div>
 
                 {/* Feature Items */}
                 <div className="space-y-12 md:space-y-20 relative">

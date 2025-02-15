@@ -1,70 +1,7 @@
 import React, { useEffect, useState } from "react";
 import CarCard, { Car } from "../components/CarCards";
 import { useLocation } from "react-router-dom";
-
-// Sample car data with types added
-const allCars: Car[] = [
-    {
-        id: 1,
-        name: "Toyota Corolla",
-        image: "https://i.ibb.co.com/9mBpKfDF/hatchback-car.jpg",
-        seats: 5,
-        luggage: "2 large, 1 small",
-        idealFor: "Families, Couples",
-        perfectFor: "City trips, Commuting",
-        transmission: "Automatic",
-        price: 50,
-        type: "Hatchback",
-    },
-    {
-        id: 2,
-        name: "Honda Civic",
-        image: "/api/placeholder/320/180",
-        seats: 5,
-        luggage: "2 large, 2 small",
-        idealFor: "Small groups, Couples",
-        perfectFor: "Road trips, Leisure travel",
-        transmission: "Automatic",
-        price: 55,
-        type: "Sedan",
-    },
-    {
-        id: 3,
-        name: "Mazda CX-5",
-        image: "/api/placeholder/320/180",
-        seats: 5,
-        luggage: "3 large, 2 small",
-        idealFor: "Families, Small groups",
-        perfectFor: "Outdoor adventures, Long trips",
-        transmission: "Automatic",
-        price: 65,
-        type: "SUV",
-    },
-    {
-        id: 4,
-        name: "Hyundai Tucson",
-        image: "/api/placeholder/320/180",
-        seats: 5,
-        luggage: "3 large, 1 small",
-        idealFor: "Families, Travelers",
-        perfectFor: "Weekend getaways, Business trips",
-        transmission: "Automatic",
-        price: 60,
-        type: "SUV",
-    },
-    {
-        id: 5,
-        name: "Tesla Model 3",
-        image: "/api/placeholder/320/180",
-        seats: 5,
-        luggage: "1 large, 2 small",
-        idealFor: "Business travelers, Couples",
-        perfectFor: "City driving, Short trips",
-        transmission: "Automatic (Electric)",
-        price: 85,
-        type: "Sedan",
-    },
-];
+import { allCars } from "../database/cars";
 
 const CarsPage: React.FC = () => {
     const location = useLocation();
