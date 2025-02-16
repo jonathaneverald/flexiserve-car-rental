@@ -15,7 +15,7 @@ export interface Car {
 const CarCard: React.FC<{ car: Car }> = ({ car }) => {
     const handleBookNow = () => {
         // Prepare the message with car details
-        const message = `Hello, I'm interested in renting the ${car.name} (${car.type}) for $${car.price}/day`;
+        const message = `Hello, I'm interested in renting the ${car.name} (${car.type}).`;
 
         // Create the WhatsApp URL with phone number and pre-filled message
         const whatsappUrl = `https://wa.me/61431244819?text=${encodeURIComponent(message)}`;
@@ -28,7 +28,7 @@ const CarCard: React.FC<{ car: Car }> = ({ car }) => {
         <div className="bg-white rounded-lg shadow-md overflow-hidden transition-transform duration-300 hover:shadow-lg hover:-translate-y-1 h-full flex flex-col">
             <div className="relative">
                 <img src={car.image} alt={car.name} className="w-full h-72 object-cover" />
-                <div className="absolute top-0 right-0 bg-blue-500 text-white px-3 py-1 m-2 rounded-md">${car.price}/day</div>
+                {/* <div className="absolute top-0 right-0 bg-blue-500 text-white px-3 py-1 m-2 rounded-md">${car.price}/day</div> */}
             </div>
 
             <div className="p-4 flex flex-col flex-grow">

@@ -4,14 +4,11 @@ const ExploreCarCards = () => {
     const navigate = useNavigate();
 
     const carTypes = [
-        // { title: "SUV", image: "https://i.ibb.co.com/7J6VtGz5/suv-car.jpg" },
-        // { title: "Sedan", image: "https://i.ibb.co.com/vvJG7cGg/sedan-car.jpg" },
-        // { title: "Convertible", image: "https://i.ibb.co.com/Q4SkVSx/convertible-car.jpg" },
-        // { title: "Hatchback", image: "https://i.ibb.co.com/9mBpKfDF/hatchback-car.jpg" },
         { title: "SUV", image: "https://i.ibb.co.com/67XySQmJ/suv-toyota-kluger.jpg" },
         { title: "Sedan", image: "https://i.ibb.co.com/Zp2Dcvsn/sedan-holden-caprice.jpg" },
         { title: "Convertible", image: "https://i.ibb.co.com/35fkcd2y/convertible-holden-cascada.jpg" },
         { title: "Hatchback", image: "https://i.ibb.co.com/xqzLsdX9/hatchback-holden-cruze.jpg" },
+        { title: "UTEs & Trucks", image: "https://i.ibb.co.com/prd9GKJm/suv-nissan-navara.jpg" },
     ];
 
     const handleCarClick = (carType: string) => {
@@ -25,10 +22,10 @@ const ExploreCarCards = () => {
     };
 
     return (
-        <div className="w-full mt-8 md:mt-12 lg:mt-16 max-w-7xl mx-auto px-4 md:px-6 lg:px-8 mb-8 md:mb-12 lg:mb-16">
+        <div className="w-full mt-8 md:mt-12 lg:mt-16 max-w-6xl mx-auto px-4 md:px-6 lg:px-8 mb-8 md:mb-12 lg:mb-16">
             <h2 className="text-2xl md:text-3xl lg:text-4xl text-blue-400 font-bold mb-6 md:mb-8 lg:mb-10">Explore Our Cars</h2>
 
-            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 md:gap-6">
+            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 md:gap-6">
                 {carTypes.map((car, index) => (
                     <div key={index} onClick={() => handleCarClick(car.title)} className="bg-white rounded-lg shadow-lg overflow-hidden transform transition-transform hover:scale-105 cursor-pointer">
                         {/* Image container with fixed aspect ratio */}

@@ -21,7 +21,7 @@ const About: React.FC = () => {
             </div>
 
             {/* Sub headline */}
-            <div className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 py-8 md:py-12 lg:py-16">
+            <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8 md:py-12 lg:py-16">
                 <p className="text-base sm:text-lg md:text-xl text-blue-400 leading-relaxed md:leading-7 text-center">
                     At FlexiServe, we are passionate about providing flexible car rental solutions that help you explore the open road with confidence. Whether for business, leisure, or adventure, we
                     are here to make every journey comfortable and stress-free.
@@ -29,16 +29,16 @@ const About: React.FC = () => {
             </div>
 
             {/* Features Timeline */}
-            <div className="relative container mx-auto px-4 pb-16">
+            <div className="relative container mx-auto px-4 pb-16 ">
                 {/* Vertical timeline line */}
                 <div className="absolute left-1/2 top-0 bottom-0 transform -translate-x-1/2 w-1 sm:w-2 md:w-6 lg:w-10  bg-blue-200/50 sm:bg-blue-200/60 md:bg-blue-200/70 lg:bg-blue-200"></div>
 
                 {/* Feature Items */}
-                <div className="space-y-12 md:space-y-20 relative">
+                <div className="space-y-12 md:space-y-20 relative sm:text-base md:text-lg lg:text-xl ">
                     {/* Feature 1 */}
-                    <div className="flex flex-col md:flex-row items-center">
+                    <div className="flex flex-col md:flex-row items-center max-w-8xl">
                         <div className="md:w-1/2 md:pr-12 mb-6 md:mb-0">
-                            <div className="w-full max-w-[280px] h-[180px] md:h-[220px] mx-auto md:ml-auto md:mr-0">
+                            <div className="w-full max-w-[320px] h-[200px] md:h-[220px] mx-auto md:ml-auto md:mr-0 ">
                                 <img src="https://i.ibb.co.com/C3JCG1hR/about-us-background.jpg" alt="Luxury car" className="rounded-lg shadow-lg w-full h-full object-cover" />
                             </div>
                         </div>
@@ -52,7 +52,7 @@ const About: React.FC = () => {
                     {/* Feature 2 */}
                     <div className="flex flex-col md:flex-row-reverse items-center">
                         <div className="md:w-1/2 md:pl-12 mb-6 md:mb-0">
-                            <div className="w-full max-w-[280px] h-[180px] md:h-[220px] mx-auto md:mr-auto md:ml-0">
+                            <div className="w-full max-w-[320px] h-[200px] md:h-[220px] mx-auto md:mr-auto md:ml-0">
                                 <img src="https://i.ibb.co/4ZKQN1gn/customer-service.jpg" alt="Customer service representative" className="rounded-lg shadow-lg w-full h-full object-cover" />
                             </div>
                         </div>
@@ -66,7 +66,7 @@ const About: React.FC = () => {
                     {/* Feature 3 */}
                     <div className="flex flex-col md:flex-row items-center">
                         <div className="md:w-1/2 md:pr-12 mb-6 md:mb-0">
-                            <div className="w-full max-w-[280px] h-[180px] md:h-[220px] mx-auto md:ml-auto md:mr-0">
+                            <div className="w-full max-w-[320px] h-[200px] md:h-[220px] mx-auto md:ml-auto md:mr-0">
                                 <img src="https://i.ibb.co.com/TBwcsL2Z/customer-satisfiction.jpg" alt="Customer satisfaction" className="rounded-lg shadow-lg w-full h-full object-cover" />
                             </div>
                         </div>
@@ -78,7 +78,7 @@ const About: React.FC = () => {
                     {/* Feature 4 */}
                     <div className="flex flex-col md:flex-row-reverse items-center">
                         <div className="md:w-1/2 md:pl-12 mb-6 md:mb-0">
-                            <div className="w-full max-w-[280px] h-[180px] md:h-[220px] mx-auto md:mr-auto md:ml-0">
+                            <div className="w-full max-w-[320px] h-[200px] md:h-[220px] mx-auto md:mr-auto md:ml-0">
                                 <img src="https://i.ibb.co/nNt6mr76/car-key.jpg" alt="Car keys" className="rounded-lg shadow-lg w-full h-full object-cover" />
                             </div>
                         </div>

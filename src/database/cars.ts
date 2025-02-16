@@ -27,7 +27,7 @@ export const allCars: Car[] = [
     {
         id: 3,
         name: "Ford Territory",
-        image: "https://i.ibb.co.com/prd9GKJm/suv-nissan-navara.jpg",
+        image: "https://i.ibb.co.com/9HJ9sMRc/suv-ford-territory.jpg",
         seats: "5 or 7 seats",
         luggage: "4-5 medium bags",
         idealFor: "Road trips or city driving. Offers a smooth drive and plenty of room for passengers and luggage.",
@@ -119,5 +119,17 @@ export const allCars: Car[] = [
         transmission: "Automatic",
         price: 50,
         type: "Hatchback",
+    },
+    {
+        id: 11,
+        name: "Nissan Navara",
+        image: "https://i.ibb.co.com/prd9GKJm/suv-nissan-navara.jpg",
+        seats: "5 seats",
+        luggage: "3-4 medium bags or cargo in the tray",
+        idealFor: "Work, outdoor adventures, or moving larger items. Offers durability and versatility for various needs.",
+        perfectFor: "Tradespeople, outdoor enthusiasts, or anyone needing a tough, reliable utility vehicle.",
+        transmission: "Manual",
+        price: 50,
+        type: "UTEs & Trucks",
     },
 ];

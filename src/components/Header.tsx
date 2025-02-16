@@ -1,5 +1,6 @@
 import React, { useState } from "react";
-import logo from "../assets/logo.png"; // Adjust the path if necessary
+import logo from "../assets/logo.png";
+import GuideDialog from "./GuideDialog";
 
 const Header: React.FC = () => {
     const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -24,13 +25,14 @@ const Header: React.FC = () => {
                 </button>
                 <div className="hidden md:block">
                     <div className="flex gap-8 font-bold text-blue-400">
-                        <a href="/" className=" hover:text-blue-800">
+                        <a href="/" className="hover:text-blue-800">
                             Home
                         </a>
-                        <a href="/about" className=" hover:text-blue-800">
+                        <a href="/about" className="hover:text-blue-800">
                             About
                         </a>
-                        <a href="/cars" className=" hover:text-blue-800">
+                        <GuideDialog />
+                        <a href="/cars" className="hover:text-blue-800">
                             Cars
                         </a>
                     </div>
@@ -39,12 +41,13 @@ const Header: React.FC = () => {
             {isMenuOpen && (
                 <div className="menu md:hidden p-4">
                     <div className="flex flex-col gap-5 font-bold text-center text-blue-400">
-                        <a href="/" className=" hover:text-blue-800">
+                        <a href="/" className="hover:text-blue-800">
                             Home
                         </a>
-                        <a href="/about" className=" hover:text-blue-800">
+                        <a href="/about" className="hover:text-blue-800">
                             About
                         </a>
+                        <GuideDialog />
                         <a href="/cars" className="hover:text-blue-800">
                             Cars
                         </a>

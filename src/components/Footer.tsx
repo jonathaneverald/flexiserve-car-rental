@@ -1,4 +1,5 @@
 import React from "react";
+import GuideDialog from "./GuideDialog";
 
 const Footer: React.FC = () => {
     return (
@@ -24,6 +25,11 @@ const Footer: React.FC = () => {
                                 <a href="/about" className="text-blue-400 hover:underline text-sm">
                                     About
                                 </a>
+                            </li>
+                            <li>
+                                <li>
+                                    <GuideDialog className="text-blue-400 hover:underline text-sm cursor-pointer" />
+                                </li>
                             </li>
                             <li>
                                 <a href="cars" className="text-blue-400 hover:underline text-sm">

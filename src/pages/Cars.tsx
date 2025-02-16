@@ -14,7 +14,7 @@ const CarsPage: React.FC = () => {
 
         if (type) {
             // Filter cars by the selected type
-            const filtered = allCars.filter((car) => car.type.toLowerCase() === type.toLowerCase());
+            const filtered = allCars.filter((car) => car.type.toLowerCase().includes(type.toLowerCase()));
             setFilteredCars(filtered.length > 0 ? filtered : allCars);
         } else {
             // If no type is specified, show all cars
@@ -32,7 +32,8 @@ const CarsPage: React.FC = () => {
             <div className="mx-auto px-4 sm:px-6 lg:px-8 py-12 md:py-16 bg-blue-50">
                 <div className="max-w-4xl mx-auto text-center">
                     <h1 className="text-3xl sm:text-4xl md:text-5xl font-bold text-blue-400 mb-4 md:mb-6 leading-tight">{currentType ? `Our ${currentType} Fleet` : "Our Fleet"}</h1>
-                    <p className="text-base sm:text-lg md:text-xl text-blue-400 leading-relaxed">Choose from our wide range of vehicles to suit your needs, from economy to luxury</p>
+                    <p className="text-base sm:text-lg md:text-xl text-blue-400 leading-relaxed">Choose from our wide range of vehicles to suit your needs, from economy to luxury.</p>
+                    <p className="text-base sm:text-lg md:text-xl text-blue-400 leading-relaxed">Starts from $200/week</p>
                 </div>
             </div>
 
