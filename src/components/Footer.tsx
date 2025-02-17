@@ -22,7 +22,7 @@ const Footer: React.FC = () => {
                                 </a>
                             </li>
                             <li>
-                                <a href="/about" className="text-blue-400 hover:underline text-sm">
+                                <a href="/#/about" className="text-blue-400 hover:underline text-sm">
                                     About
                                 </a>
                             </li>
@@ -32,7 +32,7 @@ const Footer: React.FC = () => {
                                 </li>
                             </li>
                             <li>
-                                <a href="cars" className="text-blue-400 hover:underline text-sm">
+                                <a href="#/cars" className="text-blue-400 hover:underline text-sm">
                                     Cars
                                 </a>
                             </li>

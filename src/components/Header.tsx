@@ -28,11 +28,11 @@ const Header: React.FC = () => {
                         <a href="/" className="hover:text-blue-800">
                             Home
                         </a>
-                        <a href="/about" className="hover:text-blue-800">
+                        <a href="/#/about" className="hover:text-blue-800">
                             About
                         </a>
                         <GuideDialog />
-                        <a href="/cars" className="hover:text-blue-800">
+                        <a href="/#/cars" className="hover:text-blue-800">
                             Cars
                         </a>
                     </div>
@@ -44,11 +44,11 @@ const Header: React.FC = () => {
                         <a href="/" className="hover:text-blue-800">
                             Home
                         </a>
-                        <a href="/about" className="hover:text-blue-800">
+                        <a href="/#/about" className="hover:text-blue-800">
                             About
                         </a>
                         <GuideDialog />
-                        <a href="/cars" className="hover:text-blue-800">
+                        <a href="/#/cars" className="hover:text-blue-800">
                             Cars
                         </a>
                     </div>

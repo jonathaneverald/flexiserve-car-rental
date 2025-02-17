@@ -1,6 +1,14 @@
 import React from "react";
 import ExploreCarCards from "../components/ExploreCarCards";
 import { useNavigate } from "react-router-dom";
+import undraw_order_ride from "../assets/undraw_order-ride_4gaq.svg";
+import undraw_preferences from "../assets/undraw_preferences_2bda.svg";
+import undraw_confirmed from "../assets/undraw_confirmed_f581.svg";
+import undraw_electric_car from "../assets/undraw_electric-car_vlgq.svg";
+import undraw_security from "../assets/undraw_security-on_btwg.svg";
+import undraw_car_repair from "../assets/undraw_car-repair_wski.svg";
+import undraw_travel_mode from "../assets/undraw_travel-mode_ydxo.svg";
+import undraw_vintage from "../assets/undraw_vintage_q09n.svg";
 
 const Home: React.FC = () => {
     const navigate = useNavigate();
@@ -57,7 +65,7 @@ const Home: React.FC = () => {
                             </div>
                         </div>
                     </div>
-                    <img src="/src/assets/undraw_order-ride_4gaq.svg" alt="FlexiServe Car Rental" className="max-w-full h-auto object-contain md:max-w-md" />
+                    <img src={undraw_order_ride} alt="FlexiServe Car Rental" className="max-w-full h-auto object-contain md:max-w-md" />
                 </div>
                 <div className="text-center px-4 sm:px-6 py-3 w-full max-w-md mx-auto">
                     <p className="text-xl sm:text-2xl mb-2">Starting at just $200/week!</p>
@@ -83,11 +91,7 @@ const Home: React.FC = () => {
                 <div className="flex flex-col gap-30">
                     {/* Step 1*/}
                     <div className="flex flex-col md:flex-row md:items-center gap-6 md:gap-8">
-                        <img
-                            src="/src/assets/undraw_preferences_2bda.svg"
-                            alt="FlexiServe Car Rental"
-                            className="mx-auto max-w-[200px] w-full h-auto object-contain md:max-w-[240px] lg:max-w-[280px] md:mx-0"
-                        />
+                        <img src={undraw_preferences} alt="FlexiServe Car Rental" className="mx-auto max-w-[200px] w-full h-auto object-contain md:max-w-[240px] lg:max-w-[280px] md:mx-0" />
                         <div className="flex flex-col gap-2 md:gap-3 text-center md:text-center">
                             <h3 className="text-2xl md:text-3xl font-bold">Choose Your Car</h3>
                             <p className="text-base md:text-lg leading-relaxed max-w-[500px] mx-auto md:mx-0">Explore our wide range of vehicles and select the one that best fits your needs.</p>
@@ -97,7 +101,7 @@ const Home: React.FC = () => {
                     <div className="flex flex-col md:flex-row md:items-center gap-6 md:gap-8">
                         {/* Image moved before text for mobile, but will be ordered correctly on md breakpoint */}
                         <img
-                            src="/src/assets/undraw_confirmed_f581.svg"
+                            src={undraw_confirmed}
                             alt="FlexiServe Car Rental"
                             className="mx-auto max-w-[200px] w-full h-auto object-contain md:max-w-[240px] lg:max-w-[280px] md:mx-0 md:order-last"
                         />
@@ -108,11 +112,7 @@ const Home: React.FC = () => {
                     </div>
                     {/* Step 3*/}
                     <div className="flex flex-col md:flex-row md:items-center gap-6 md:gap-8">
-                        <img
-                            src="/src/assets/undraw_electric-car_vlgq.svg"
-                            alt="FlexiServe Car Rental"
-                            className="mx-auto max-w-[200px] w-full h-auto object-contain md:max-w-[240px] lg:max-w-[280px] md:mx-0"
-                        />
+                        <img src={undraw_electric_car} alt="FlexiServe Car Rental" className="mx-auto max-w-[200px] w-full h-auto object-contain md:max-w-[240px] lg:max-w-[280px] md:mx-0" />
                         <div className="flex flex-col gap-2 md:gap-3 text-center md:text-center">
                             <h3 className="text-2xl md:text-3xl font-bold">Hit The Road</h3>
                             <p className="text-base md:text-lg leading-relaxed max-w-[500px] mx-auto md:mx-0">Pick up your car and start driving with confidence—it's that simple!</p>
@@ -139,11 +139,7 @@ const Home: React.FC = () => {
                 <div className="flex flex-col gap-30 mt-4">
                     {/* Step 1 - Left aligned */}
                     <div className="flex flex-col md:flex-row md:items-center gap-6 md:gap-8">
-                        <img
-                            src="/src/assets/undraw_security-on_btwg.svg"
-                            alt="FlexiServe Car Rental"
-                            className="mx-auto max-w-[140px] w-full h-auto object-contain md:max-w-[180px] lg:max-w-[220px] md:mx-0 order-first"
-                        />
+                        <img src={undraw_security} alt="FlexiServe Car Rental" className="mx-auto max-w-[140px] w-full h-auto object-contain md:max-w-[180px] lg:max-w-[220px] md:mx-0 order-first" />
                         <div className="flex flex-col gap-2 md:gap-3 text-center md:text-left">
                             <h3 className="text-2xl md:text-3xl font-bold">Comprehensive Coverage</h3>
                             <p className="text-base md:text-lg leading-relaxed max-w-[500px] mx-auto md:mx-0">Enjoy peace of mind with fully comprehensive car insurance included in every rental.</p>
@@ -153,7 +149,7 @@ const Home: React.FC = () => {
                     {/* Step 2 - Right aligned */}
                     <div className="flex flex-col md:flex-row md:items-center gap-6 md:gap-8">
                         <img
-                            src="/src/assets/undraw_car-repair_wski.svg"
+                            src={undraw_car_repair}
                             alt="FlexiServe Car Rental"
                             className="mx-auto max-w-[140px] w-full h-auto object-contain md:max-w-[180px] lg:max-w-[220px] md:mx-0 order-first md:order-last"
                         />
@@ -168,7 +164,7 @@ const Home: React.FC = () => {
                     {/* Step 3 - Left aligned */}
                     <div className="flex flex-col md:flex-row md:items-center gap-6 md:gap-8">
                         <img
-                            src="/src/assets/undraw_travel-mode_ydxo.svg"
+                            src={undraw_travel_mode}
                             alt="FlexiServe Car Rental"
                             className="mx-auto max-w-[140px] w-full h-auto object-contain md:max-w-[180px] lg:max-w-[220px] md:mx-0 order-first"
                         />
@@ -181,7 +177,7 @@ const Home: React.FC = () => {
                     {/* Step 4 - Right aligned */}
                     <div className="flex flex-col md:flex-row md:items-center gap-6 md:gap-8">
                         <img
-                            src="/src/assets/undraw_vintage_q09n.svg"
+                            src={undraw_vintage}
                             alt="FlexiServe Car Rental"
                             className="mx-auto max-w-[140px] w-full h-auto object-contain md:max-w-[180px] lg:max-w-[220px] md:mx-0 order-first md:order-last"
                         />
